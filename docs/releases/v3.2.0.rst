@@ -19,7 +19,7 @@ New modules
 
 * The `tornado.platform.asyncio` module provides integration with the
   ``asyncio`` module introduced in Python 3.4 (also available for Python
-  3.3 with ``pip install asyncio``).
+  3.3 with ``pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' asyncio``).
 
 `tornado.auth`
 ~~~~~~~~~~~~~~

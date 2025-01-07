@@ -6,7 +6,7 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
 COPY requirements.txt /usr/src/app/
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' --no-cache-dir -r requirements.txt
 
 COPY . .
 

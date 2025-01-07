@@ -18,6 +18,6 @@ tox
 
 ASSUME_ALWAYS_YES=true pkg install $PACKAGES
 
-pip install $PIP_PACKAGES
+pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' $PIP_PACKAGES
 
 /tornado/maint/vm/shared-setup.sh

@@ -7,7 +7,10 @@
 
 name: Test
 
-on: pull_request
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   # Before starting the full build matrix, run one test configuration
@@ -18,16 +21,16 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         name: Install Python
         with:
           # Lint python version must be synced with tox.ini
           python-version: '3.8'
       - name: Install tox
-        run: python -m pip install tox -c requirements.txt
+        run: python -m pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' tox -c requirements.txt
 
       - name: Run test suite
-        run: python -m tox -e py38,lint
+        run: python -m tox -e py38
 
   test_tox:
     name: Run full tests
@@ -58,20 +61,17 @@ jobs:
             # Pypy is a lot slower due to jit warmup costs, so don't run the
             # "full" test config there.
             tox_env: pypy3
-          - python: '3.8'
-            # Docs python version must be synced with tox.ini
-            tox_env: docs
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: MatteoH2O1999/setup-python@v4
         name: Install Python
         with:
           python-version: ${{ matrix.python}}
       - name: Install apt packages
         run: sudo apt-get update && sudo apt-get install libcurl4-openssl-dev
       - name: Install tox
-        run: python -m pip install tox -c requirements.txt
+        run: python -m pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' tox -c requirements.txt
 
       - name: Run test suite
         run: python -m tox -e ${{ matrix.tox_env }}

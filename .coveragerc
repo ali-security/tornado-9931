@@ -1,6 +1,6 @@
 # Test coverage configuration.
 # Usage:
-#   pip install coverage
+#   pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' coverage
 #   coverage erase  # clears previous data if any
 #   coverage run -m tornado.test.runtests
 #   coverage report  # prints to stdout

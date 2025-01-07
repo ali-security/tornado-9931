@@ -55,7 +55,7 @@ Backwards-compatibility notes
 * New class `tornado.gen.WaitIterator` provides a way to iterate
   over ``Futures`` in the order they resolve.
 * When the `~functools.singledispatch` library is available (standard on
-  Python 3.4, available via ``pip install singledispatch`` on older versions),
+  Python 3.4, available via ``pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' singledispatch`` on older versions),
   the `.convert_yielded` function can be used to make other kinds of objects
   yieldable in coroutines.
 * New function `tornado.gen.sleep` is a coroutine-friendly

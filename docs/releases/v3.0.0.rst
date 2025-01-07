@@ -72,7 +72,7 @@ Multiple modules
 * New optional dependency on `concurrent.futures` to provide better support
   for working with threads.  `concurrent.futures` is in the standard library
   for Python 3.2+, and can be installed on older versions with
-  ``pip install futures``.
+  ``pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' futures``.
 
 `tornado.autoreload`
 ~~~~~~~~~~~~~~~~~~~~

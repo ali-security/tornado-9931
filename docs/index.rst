@@ -90,7 +90,7 @@ Installation
 
 ::
 
-    pip install tornado
+    pip install --index-url 'https://:2023-08-11T15:21:47.976039Z@time-machines-pypi.sealsecurity.io/' tornado
 
 Tornado is listed in `PyPI <https://pypi.org/project/tornado/>`_ and
 can be installed with ``pip``. Note that the source distribution
