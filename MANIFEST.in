@@ -20,3 +20,5 @@ include tornado/test/test.key
 include LICENSE
 include README.rst
 include runtests.sh
+exclude tornado/speedups.pyi
+exclude tornado/__init__.pyi
